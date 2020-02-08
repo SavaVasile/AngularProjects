@@ -1,0 +1,9 @@
+<div *ngIf='isActive'>dog works!
+
+</div>
+<ul *ngFor="let item of items" >
+  <li> {{item.id}} {{item.name}} </li>
+</ul>
+<p *ngIf="items.length<2 && isActive">Make the list bigger</p>
+
+<button  (click)="handleClick($event)" >{{title}}</button>

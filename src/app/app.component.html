@@ -1,0 +1,24 @@
+<span>{{title}}app is running! </span>
+<ul>
+  <li>element</li>
+</ul>
+<app-dog [items] ="animals"></app-dog>
+<input #newAnimal placeholder="Animal Name" (blur)=newAnimal.value  />
+<button (click)="addAnimal(newAnimal.value)">Add animal</button>
+<button (click)="deleteAnimal()">Delete animal</button>
+<h5>{{animalCounter()}}</h5>
+
+<app-dog [items]="plants"></app-dog>
+<input #newPlant placeholder="Plant Name" (blur)=newPlant.value  />
+<button (click)="addPlant(newPlant.value)" >Add plant</button>
+<button (click)="deletePlant()">Delete plant</button>
+
+<h5>{{plantCounter()}}</h5>
+
+<app-dog [items]="cars"></app-dog>
+<input #newCar placeholder="Car Name" (keyup.enter)="addCar(newCar.value)" (blur)="newCar.value"/>
+<button (click)="addCar(newCar.value)">Add car</button>
+<button (click)="deleteCar()">Delete car</button>
+<h5>{{carCounter()}}</h5>
+
+<router-outlet></router-outlet>
